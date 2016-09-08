@@ -8,7 +8,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FCategory"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "Some Userful Categories"
 
   s.homepage     = "https://github.com/Fmyz/FCategory.git"
@@ -21,12 +21,19 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/Fmyz/FCategory.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Category/**/*.{h,m}"
+  s.source_files = 'Category/FCategory.h'
+#  s.source_files  = "Category/**/*.{h,m}"
 
-  s.frameworks = "UIKit", "Foundation"
+  s.subspec 'UIKitFCategory' do |ss|
+    ss.source_files = 'Category/UIKitFCategory/*.{h,m}'
+    ss.frameworks = 'UIKit'
+    ss.dependency "MBProgressHUD", "~> 0.9"
+    ss.dependency "MJRefresh", "~> 3.1.12"
+    ss.dependency "SDWebImage", "~> 3.8.1"
+  end
 
-  s.dependency "MBProgressHUD", "~> 0.9"
-  s.dependency "MJRefresh", "~> 3.1.12"
-  s.dependency "SDWebImage", "~> 3.8.1"
+  s.subspec 'FoundationCategory' do |ss|
+    ss.source_files = 'Category/FoundationCategory/*.{h,m}'
+  end
 
 end
