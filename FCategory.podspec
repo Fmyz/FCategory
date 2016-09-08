@@ -8,7 +8,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FCategory"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "Some Userful Categories"
 
   s.homepage     = "https://github.com/Fmyz/FCategory.git"
@@ -21,8 +21,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/Fmyz/FCategory.git", :tag => "#{s.version}" }
   s.requires_arc = true
-
-  s.source_files = 'Category/FCategory.h'
 
   s.subspec 'UIKitFCategory' do |ss|
     ss.source_files = 'Category/UIKitFCategory/*.{h,m}'
