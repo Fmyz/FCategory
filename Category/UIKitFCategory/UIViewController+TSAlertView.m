@@ -7,7 +7,6 @@
 //
 
 #import "UIViewController+TSAlertView.h"
-#import "AppDelegate.h"
 
 @implementation UIViewController (TSAlertView)
 
@@ -100,18 +99,16 @@
         [alertC addAction:destructiveAction];
     }
     
-    AppDelegate *delgate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    id rootVC = delgate.window.rootViewController;
+    id rootVC = [UIApplication sharedApplication].delegate.window.rootViewController;
     
     if ([rootVC isKindOfClass:[UINavigationController class]]) {
         if (((UINavigationController *)rootVC).topViewController) {
             [((UINavigationController *)rootVC).topViewController presentViewController:alertC animated:YES completion:nil];
         }else{
-            [delgate.window.rootViewController presentViewController:alertC animated:YES completion:nil];
+            [rootVC presentViewController:alertC animated:YES completion:nil];
         }
     }else{
-        [delgate.window.rootViewController presentViewController:alertC animated:YES completion:nil];
+        [rootVC presentViewController:alertC animated:YES completion:nil];
     }
 }
 

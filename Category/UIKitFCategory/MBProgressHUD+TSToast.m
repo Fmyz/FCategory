@@ -7,15 +7,13 @@
 //
 
 #import "MBProgressHUD+TSToast.h"
-#import "AppDelegate.h"
 
 @implementation MBProgressHUD (TSToast)
 
 ///toast会加载在AppDelegate.window上面
 + (void)showToast:(NSString *)toast
 {
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [MBProgressHUD showToast:toast inView:delegate.window mode:MBProgressHUDModeText afterDelay:1.f];
+    [MBProgressHUD showToast:toast inView:[UIApplication sharedApplication].delegate.window mode:MBProgressHUDModeText afterDelay:1.f];
 }
 
 + (void)showToast:(NSString *)toast inView:(UIView *)view

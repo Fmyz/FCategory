@@ -11,15 +11,15 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "Some Userful Categories"
 
-  s.homepage     = "https://github.com/Fmyz/FCategory"
+  s.homepage     = "https://github.com/Fmyz/FCategory.git"
 
   s.license      = "MIT"
 
-  s.author             = "Fmyz"
+  s.author       = "Fmyz"
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "https://github.com/Fmyz/FCategory", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/Fmyz/FCategory.git", :tag => "#{s.version}" }
 
   s.source_files  = "Category/**/*.{h,m}"
 

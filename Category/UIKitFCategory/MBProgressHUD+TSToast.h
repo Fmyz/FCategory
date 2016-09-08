@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Fmyz. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface MBProgressHUD (TSToast)
 

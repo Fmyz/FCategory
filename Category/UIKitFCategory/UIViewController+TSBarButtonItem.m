@@ -21,7 +21,7 @@
     if (!backIcon) {
         return;
     }
-    [self addBackBarButtonItemWithImage:];
+    [self addBackBarButtonItemWithImage:backIcon];
 }
 - (void)addBackBarButtonItemWithImage:(UIImage *)image
 {
