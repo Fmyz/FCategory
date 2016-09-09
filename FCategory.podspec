@@ -8,7 +8,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FCategory"
-  s.version      = "0.0.7"
+  s.version      = "0.1.0"
   s.summary      = "Some Userful Categories"
 
   s.homepage     = "https://github.com/Fmyz/FCategory.git"
