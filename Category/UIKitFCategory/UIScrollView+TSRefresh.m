@@ -37,6 +37,10 @@
         [self.mj_header endRefreshing];
     }
 }
+- (BOOL)isHeaderRefreshing
+{
+    return self.mj_header.isRefreshing;
+}
 
 - (void)addFooterRefreshWithBlock:(void(^)())refreshingBlock
 {
@@ -64,6 +68,10 @@
     if (self.mj_footer.isRefreshing) {
         [self.mj_footer endRefreshing];
     }
+}
+- (BOOL)isFooterRefreshing
+{
+    return self.mj_footer.isRefreshing;
 }
 
 // Set the callback（Once you enter the refresh status，then call the action of target，that is call [self loadMoreData]）

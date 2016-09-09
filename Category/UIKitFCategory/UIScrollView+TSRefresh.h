@@ -19,11 +19,15 @@
 - (void)beginHeaderRefreshing;
 - (void)endHeaderRefreshing;
 
+- (BOOL)isHeaderRefreshing;
+
 //尾部视图刷新
 - (void)addFooterRefreshWithBlock:(void(^)())refreshingBlock;
 - (void)addFooterRefreshWithTarget:(id)target action:(SEL)action;
 
 - (void)beginFooterRefreshing;
 - (void)endFooterRefreshing;
+
+- (BOOL)isFooterRefreshing;
 
 @end
