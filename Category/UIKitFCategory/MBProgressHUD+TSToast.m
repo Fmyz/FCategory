@@ -11,31 +11,32 @@
 @implementation MBProgressHUD (TSToast)
 
 ///toast会加载在AppDelegate.window上面
-+ (void)showToast:(NSString *)toast
++ (MBProgressHUD *)showToast:(NSString *)toast
 {
-    [MBProgressHUD showToast:toast inView:[UIApplication sharedApplication].delegate.window mode:MBProgressHUDModeText afterDelay:1.f];
+   return [MBProgressHUD showToast:toast inView:[UIApplication sharedApplication].delegate.window mode:MBProgressHUDModeText afterDelay:1.f];
 }
 
-+ (void)showToast:(NSString *)toast inView:(UIView *)view
++ (MBProgressHUD *)showToast:(NSString *)toast inView:(UIView *)view
 {
-    [MBProgressHUD showToast:toast inView:view mode:MBProgressHUDModeText afterDelay:1.f];
+   return [MBProgressHUD showToast:toast inView:view mode:MBProgressHUDModeText afterDelay:1.f];
 }
 
-+ (void)showToast:(NSString *)toast inView:(UIView *)view mode:(MBProgressHUDMode)mode
++ (MBProgressHUD *)showToast:(NSString *)toast inView:(UIView *)view mode:(MBProgressHUDMode)mode
 {
-    [MBProgressHUD showToast:toast inView:view mode:mode afterDelay:1.f];
+   return [MBProgressHUD showToast:toast inView:view mode:mode afterDelay:1.f];
 }
 
-+ (void)showToast:(NSString *)toast inView:(UIView *)view mode:(MBProgressHUDMode)mode afterDelay:(NSTimeInterval)delay
++ (MBProgressHUD *)showToast:(NSString *)toast inView:(UIView *)view mode:(MBProgressHUDMode)mode afterDelay:(NSTimeInterval)delay
 {
     if (!view) {
-        return;
+        return nil;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.labelText = toast;
     hud.mode = mode;
     [hud removeFromSuperViewOnHide];
     [hud hide:YES afterDelay:delay];
+    return hud;
 }
 
 @end

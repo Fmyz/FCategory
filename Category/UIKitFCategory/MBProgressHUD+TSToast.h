@@ -11,12 +11,12 @@
 @interface MBProgressHUD (TSToast)
 
 ///toast会加载在AppDelegate.window上面
-+ (void)showToast:(NSString *)toast;
++ (MBProgressHUD *)showToast:(NSString *)toast;
 
-+ (void)showToast:(NSString *)toast inView:(UIView *)view;
++ (MBProgressHUD *)showToast:(NSString *)toast inView:(UIView *)view;
 
-+ (void)showToast:(NSString *)toast inView:(UIView *)view mode:(MBProgressHUDMode)mode;
++ (MBProgressHUD *)showToast:(NSString *)toast inView:(UIView *)view mode:(MBProgressHUDMode)mode;
 
-+ (void)showToast:(NSString *)toast inView:(UIView *)view mode:(MBProgressHUDMode)mode afterDelay:(NSTimeInterval)delay;
++ (MBProgressHUD *)showToast:(NSString *)toast inView:(UIView *)view mode:(MBProgressHUDMode)mode afterDelay:(NSTimeInterval)delay;
 
 @end
